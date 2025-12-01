@@ -5,25 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CV – Léandre Legrand</title>
 <link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="script.css">
-<style>
-/* Styles spécifiques à cette page pour améliorer l'impression/PDF */
-.container { max-width: 1000px; margin: 30px auto; padding: 20px; }
-.cv-card { background:#fff; padding:24px; border-radius:12px; box-shadow:0 6px 18px rgba(15,23,42,0.06); }
-.cv-header { display:flex; gap:20px; align-items:center; margin-bottom:18px; }
-.cv-title h1 { margin:0; font-size:1.8rem; letter-spacing:1px; }
-.cv-sub { color:#374151; margin-top:6px; font-size:0.95rem; }
-.cv-grid { display:grid; grid-template-columns: 1fr 320px; gap:20px; align-items:start; }
-.section { margin-bottom:18px; }
-.section h3 { margin:0 0 8px 0; font-size:1.05rem; color:#0f172a; }
-.section div, .section p { color:#374151; line-height:1.5; font-size:0.95rem; }
-.cv-meta { font-size:0.9rem; color:#6b7280; margin-top:6px; }
-aside .section { background:linear-gradient(90deg,#f8fafc,#eef2ff); padding:12px; border-radius:8px; }
-.skills-list { display:flex; flex-wrap:wrap; gap:8px; }
-.skill-pill { background:#eef2ff; color:#0f172a; padding:6px 10px; border-radius:999px; font-size:0.85rem; }
-#downloadPdf { margin-top:14px; }
-@media (max-width:900px){ .cv-grid{ grid-template-columns:1fr; } }
-</style>
+<link rel="stylesheet" href="../css/cv.css">
 </head>
 <body>
 
@@ -37,106 +19,125 @@ aside .section { background:linear-gradient(90deg,#f8fafc,#eef2ff); padding:12px
 </ul>
 </nav>
 
-<div class="container">
-  <div class="cv-card" id="cv">
-    <div class="cv-header">
+<div class="cv-wrap">
+  <article class="cv-card" id="cv">
+    <header class="cv-header">
+      <div class="avatar">
+        <img src="../img/photo_Léandre.jpg" alt="Photo Léandre Legrand">
+      </div>
       <div class="cv-title">
         <h1>Léandre Legrand</h1>
-        <p class="cv-sub">Étudiant en BUT Informatique — IUT de Lille · Stage avril → juin 2025 · Alternance possible</p>
-        <p class="cv-meta">leandrel.legrand@gmail.com · GitHub: <a href="https://github.com/leandrelegrand" target="_blank" rel="noopener">leandrelegrand</a></p>
+        <p class="sub">20 ans · Permis B</p>
+        <p class="contact">leandrel.legrand@gmail.com · <a href="https://github.com/leandrelegrand" target="_blank" rel="noopener">github.com/leandrelegrand</a></p>
       </div>
-    </div>
+    </header>
 
     <div class="cv-grid">
-      <main>
-        <section class="section">
-          <h3>Profil</h3>
-          <div>Étudiant en deuxième année de BUT Informatique, orienté développement back-end et visualisation de données. J'aime concevoir des solutions robustes, écrire du code propre et participer à des projets collaboratifs.</div>
+      <main class="cv-main">
+        <section class="section profile">
+          <h2>Profil</h2>
+          <p>Étudiant en BUT Informatique, orienté développement back‑end et visualisation de données. Recherche stage (avril→juin 2025) ou alternance. Code propre, sens de l'analyse et goût du travail en équipe.</p>
         </section>
 
-        <section class="section">
-          <h3>Expériences</h3>
-          <div>
-            <strong>Méo‑Fichaux SAS — Manutentionnaire</strong> · La Madeleine · 2023–2025<br>
-            <strong>Restaurant Le Fer à Cheval — Extra en salle</strong> · Roubaix · Août 2023
+        <section class="section experience">
+          <h2>Expériences</h2>
+          <div class="exp-item">
+            <h3>Méo‑Fichaux SAS — Manutentionnaire</h3>
+            <span class="meta">La Madeleine · 2023–2025</span>
+            <p>Responsable de la logistique quotidienne, optimisation des flux et automatismes simples (saisie, suivis). Travail d'équipe et respect des deadlines.</p>
+          </div>
+
+          <div class="exp-item">
+            <h3>Restaurant Le Fer à Cheval — Extra en salle</h3>
+            <span class="meta">Roubaix · Août 2023</span>
+            <p>Relation client, organisation rapide et gestion du stress.</p>
           </div>
         </section>
 
-        <section class="section">
-          <h3>Éducation</h3>
-          <div>
-            <strong>BUT Informatique 2ème année</strong> — IUT de Lille · 2024–Aujourd’hui<br>
-            <strong>Baccalauréat Maths & Numérique</strong> — Lycée Kernanec · Mention Bien · 2023<br>
-            <strong>Brevet des collèges</strong> — 2020
-          </div>
+        <section class="section education">
+          <h2>Formation</h2>
+          <p><strong>BUT Informatique — IUT de Lille</strong> · 2024–Aujourd'hui</p>
+          <p><strong>Bac Maths & Numérique — Mention Bien</strong> · 2023</p>
+        </section>
+
+        <section class="section projects">
+          <h2>Projets sélectionnés</h2>
+          <ul>
+            <li><strong>Appariement SAÉ</strong> — Outil d'appariement et d'analyse (Java, CSV, algorithmes).</li>
+            <li><strong>Visualisations</strong> — Dashboards et graphiques pour datasets (Python, pandas, matplotlib).</li>
+            <li><strong>Outils personnels</strong> — Utilitaires en JavaScript & Java publiés sur GitHub.</li>
+          </ul>
         </section>
       </main>
 
-      <aside>
-        <div class="section">
-          <h3>Compétences</h3>
-          <div class="skills-list">
-            <span class="skill-pill">Java</span>
-            <span class="skill-pill">SQL</span>
-            <span class="skill-pill">HTML/CSS/JS</span>
-            <span class="skill-pill">Python</span>
-            <span class="skill-pill">Git/GitHub avancé</span>
-            <span class="skill-pill">UML</span>
-            <span class="skill-pill">Méthode Agile/Scrum</span>
-            <span class="skill-pill">OOP</span>
-            <span class="skill-pill">API REST</span>
-            <span class="skill-pill">Tests/Debugging</span>
-          </div>
-        </div>
+      <aside class="cv-aside">
+        <section class="section skills">
+          <h2>Compétences</h2>
+          <ul class="skills-list">
+            <li>Java (POO, design)</li>
+            <li>SQL / Bases de données</li>
+            <li>HTML / CSS / JavaScript</li>
+            <li>Python — Data (pandas)</li>
+            <li>API REST / JSON</li>
+            <li>Git / GitHub</li>
+            <li>Tests unitaires & debugging</li>
+          </ul>
+        </section>
 
-        <div class="section">
-          <h3>Soft Skills</h3>
-          <div>Autonomie • Organisation • Communication • Esprit d’analyse • Curiosité • Gestion du temps</div>
-        </div>
+        <section class="section developed">
+          <h2>Compétences développées</h2>
+          <ul>
+            <li>Conception d'algorithmes d'appariement (rigueur algorithmique)</li>
+            <li>Nettoyage & analyse de données (pandas, CSV)</li>
+            <li>Déploiement & gestion de versions (Git)</li>
+            <li>Travail collaboratif et documentation</li>
+            <li>Gestion du temps et organisation opérationnelle</li>
+          </ul>
+        </section>
 
-        <div class="section">
-          <h3>Skills Développés</h3>
-          <div>Projet SAÉ d’appariement adolescents — Analyse de données — Visualisation de données — Projets créatifs en Java et Python</div>
+        <section class="section extra">
+          <h2>Informations</h2>
+          <p>Langues : Français (natif) · Anglais (débutant/technique)</p>
+          <p>Permis : B</p>
+        </section>
+
+        <div class="actions">
+          <button id="downloadPdf" class="btn">Télécharger PDF</button>
+          <a class="btn outline" href="../html/contact.html">Me contacter</a>
         </div>
       </aside>
     </div>
-
-    <button id="downloadPdf" class="btn">Télécharger PDF</button>
-  </div>
+  </article>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 <script>
 document.getElementById('downloadPdf').addEventListener('click', function(){
+  const cvElement = document.getElementById('cv').cloneNode(true);
 
-    
-    const cvElement = document.getElementById('cv').cloneNode(true);
 
-    
-    const photo = cvElement.querySelector('.cv-photo');
-    if(photo) photo.remove();
+  cvElement.querySelectorAll('a').forEach(a => {
+    const s = document.createElement('span'); s.textContent = a.textContent; a.replaceWith(s);
+  });
+  cvElement.querySelectorAll('button').forEach(b => b.remove());
 
-   
-    const pdfStyle = document.createElement('style');
-    pdfStyle.textContent = `
-        body { font-family: Inter, sans-serif; background: #ffffff; color: #0f172a; }
-        .cv-card { width: 100%; padding: 50px; border-radius: 0; box-shadow: none; }
-        .section { background: linear-gradient(90deg,#f9fafb,#eef2ff); margin: 0 0 30px 0; padding: 25px; border-radius: 15px; }
-        .cv-title h1 { font-size: 2.5rem; margin-bottom: 12px; }
-        .cv-title p { font-size: 1rem; margin-bottom: 6px; }
-        aside { width: 100%; }
-        .btn { display:none; } /* masquer le bouton */
-        .cv-grid { grid-template-columns: 1fr; gap: 20px; }
-    `;
-    cvElement.prepend(pdfStyle);
+  const style = document.createElement('style');
+  style.textContent = `
+    body{background:#fff;color:#111;font-family:Inter,Arial,Helvetica,sans-serif}
+    .cv-card{box-shadow:none;padding:36px}
+    .cv-header{display:block;text-align:center}
+    .cv-title h1{font-size:36px}
+    .cv-grid{display:block}
+  `;
+  cvElement.prepend(style);
 
-    html2pdf().set({
-        margin: 10,
-        filename: 'CV-Leandre-Legrand.pdf',
-        image: { type: 'jpeg', quality: 1 },
-        html2canvas: { scale: 2, useCORS: true },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    }).from(cvElement).save();
+  html2pdf().set({
+    margin: 10,
+    filename: 'cv_léandre.pdf',
+    image: { type: 'jpeg', quality: 1 },
+    html2canvas: { scale: 2, useCORS: true },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+  }).from(cvElement).save();
 });
 </script>
 
