@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact – Léandre</title>
 <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/contact.css">
 </head>
 <body>
 <nav class="navbar">
-<h2 class="logo">LÉANDRE</h2>
+<h2 class="logo">LÉANDRE LEGRAND</h2>
 <ul>
 <li><a href="../index.html">Accueil</a></li>
 <li><a href="portofolio.html">Portfolio</a></li>
@@ -17,22 +18,97 @@
 </ul>
 </nav>
 
-<header class="hero small">
+<header class="hero-contact">
+<div class="hero-content">
 <h1>Me contacter</h1>
+<p class="subtitle">Une question, une opportunité ? Je suis à l'écoute.</p>
+</div>
 </header>
 
-<main>
-<section class="card">
-<form action="https://formspree.io/f/xvgerpjg" method="POST">
-<input type="text" name="name" placeholder="Votre nom" required>
-<input type="email" name="email" placeholder="Votre email" required>
-<textarea name="message" placeholder="Votre message" rows="5" required></textarea>
-<button type="submit" class="btn">Envoyer</button>
-</form>
-<p id="status"></p>
-</section>
+<main class="contact-wrap">
+<div class="contact-grid">
+  <section class="contact-form-section">
+    <h2>Envoyez un message</h2>
+    <form action="https://formspree.io/f/xvgerpjg" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Sujet</label>
+        <input type="text" id="subject" name="subject" placeholder="Stage • Alternance • Question • Autre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Votre message..." rows="6" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-submit">Envoyer</button>
+      <p id="status" class="form-status"></p>
+    </form>
+  </section>
+
+  <aside class="contact-info">
+    <h2>Infos de contact</h2>
+
+    <div class="info-item">
+      <span class="icon">📧</span>
+      <div>
+        <h3>Email</h3>
+        <a href="mailto:leandrel.legrand@gmail.com">leandrel.legrand@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <span class="icon">💼</span>
+      <div>
+        <h3>LinkedIn</h3>
+        <a href="https://linkedin.com/in/léandre-legrand" target="_blank" rel="noopener">linkedin.com/in/léandre-legrand</a>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <span class="icon">🐙</span>
+      <div>
+        <h3>GitHub</h3>
+        <a href="https://github.com/leandrelegrand" target="_blank" rel="noopener">github.com/leandrelegrand</a>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <span class="icon">📍</span>
+      <div>
+        <h3>Localisation</h3>
+        <p>Région Hauts-de-France</p>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h3>Disponibilité</h3>
+      <p>Stage : avril → juin 2025</p>
+      <p>Alternance : ouvert à discuter</p>
+    </div>
+
+    <div class="info-box highlight">
+      <h3>Réponse rapide</h3>
+      <p>Je réponds généralement sous 24–48h.</p>
+    </div>
+  </aside>
+</div>
 </main>
 
-<script src="../script.js"></script>
+<footer class="footer-simple">
+<p>© 2025 Léandre Legrand · Tous droits réservés</p>
+</footer>
+
+<script src="../js/script.js"></script>
+<script src="../js/contact.js"></script>
 </body>
 </html>
