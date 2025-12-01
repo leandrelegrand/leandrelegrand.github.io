@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio – Léandre</title>
 <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/portfolio.css">
 </head>
 <body>
 <nav class="navbar">
@@ -17,22 +18,20 @@
 </ul>
 </nav>
 
-<header class="hero small">
+<header class="hero-portfolio">
 <h1>Mes Projets</h1>
+<p class="subtitle">Découvrez mes projets sur GitHub et GitLab</p>
 </header>
 
-<main>
-<section class="card">
-<h2>Projets Git</h2>
-<p>Choisis la source :</p>
+<main class="portfolio-wrap">
+<section class="projects-section">
 <div class="source-toggle">
-<button id="use-github" class="btn small">GitHub</button>
-<button id="use-gitlab" class="btn small outline">GitLab</button>
+<button id="use-github" class="btn btn-toggle active">GitHub</button>
+<button id="use-gitlab" class="btn btn-toggle">GitLab</button>
 </div>
 <div id="github-projects" class="projects"></div>
 </section>
 </main>
-
 
 <script src="../js/script.js"></script>
 </body>

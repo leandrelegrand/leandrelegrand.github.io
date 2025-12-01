@@ -3,6 +3,7 @@ const btnGH = document.getElementById('use-github');
 const btnGL = document.getElementById('use-gitlab');
 
 const GITHUB_USERNAME = 'leandrelegrand';
+const GITLAB_USERNAME = 'leandre.legrand.etu';
 
 async function fetchGitHub(username = GITHUB_USERNAME) {
   githubProjectsEl.innerHTML = '<p>Chargement des projets GitHub...</p>';
@@ -39,10 +40,10 @@ async function fetchGitHub(username = GITHUB_USERNAME) {
   }
 }
 
-async function fetchGitLab(userId = 'USER_ID_GITLAB') {
+async function fetchGitLab(username = GITLAB_USERNAME) {
   githubProjectsEl.innerHTML = '<p>Chargement des projets GitLab...</p>';
   try {
-    const res = await fetch(`https://gitlab.com/api/v4/users/${userId}/projects?archived=false&per_page=100`);
+    const res = await fetch(`https://gitlab.com/api/v4/users/${encodeURIComponent(username)}/projects?archived=false&per_page=100`);
     if (!res.ok) throw new Error('Utilisateur GitLab non trouvé');
     
     const data = await res.json();
@@ -71,8 +72,17 @@ async function fetchGitLab(userId = 'USER_ID_GITLAB') {
   }
 }
 
-if (btnGH) btnGH.addEventListener('click', () => fetchGitHub());
-if (btnGL) btnGL.addEventListener('click', () => fetchGitLab());
+if (btnGH) btnGH.addEventListener('click', () => {
+  fetchGitHub();
+  btnGH.classList.add('active');
+  btnGL.classList.remove('active');
+});
+
+if (btnGL) btnGL.addEventListener('click', () => {
+  fetchGitLab();
+  btnGL.classList.add('active');
+  btnGH.classList.remove('active');
+});
 
 // Charge GitHub par défaut
 if (githubProjectsEl) fetchGitHub();
