@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV – Léandre Legrand</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="script.css">
+<style>
+/* Styles spécifiques à cette page pour améliorer l'impression/PDF */
+.container { max-width: 1000px; margin: 30px auto; padding: 20px; }
+.cv-card { background:#fff; padding:24px; border-radius:12px; box-shadow:0 6px 18px rgba(15,23,42,0.06); }
+.cv-header { display:flex; gap:20px; align-items:center; margin-bottom:18px; }
+.cv-title h1 { margin:0; font-size:1.8rem; letter-spacing:1px; }
+.cv-sub { color:#374151; margin-top:6px; font-size:0.95rem; }
+.cv-grid { display:grid; grid-template-columns: 1fr 320px; gap:20px; align-items:start; }
+.section { margin-bottom:18px; }
+.section h3 { margin:0 0 8px 0; font-size:1.05rem; color:#0f172a; }
+.section div, .section p { color:#374151; line-height:1.5; font-size:0.95rem; }
+.cv-meta { font-size:0.9rem; color:#6b7280; margin-top:6px; }
+aside .section { background:linear-gradient(90deg,#f8fafc,#eef2ff); padding:12px; border-radius:8px; }
+.skills-list { display:flex; flex-wrap:wrap; gap:8px; }
+.skill-pill { background:#eef2ff; color:#0f172a; padding:6px 10px; border-radius:999px; font-size:0.85rem; }
+#downloadPdf { margin-top:14px; }
+@media (max-width:900px){ .cv-grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<h2 class="logo">LÉANDRE</h2>
+<ul>
+<li><a href="../index.html">Accueil</a></li>
+<li><a href="portofolio.html">Portfolio</a></li>
+<li><a href="cv.html" class="active">CV</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<div class="container">
+  <div class="cv-card" id="cv">
+    <div class="cv-header">
+      <div class="cv-title">
+        <h1>Léandre Legrand</h1>
+        <p class="cv-sub">Étudiant en BUT Informatique — IUT de Lille · Stage avril → juin 2025 · Alternance possible</p>
+        <p class="cv-meta">leandrel.legrand@gmail.com · GitHub: <a href="https://github.com/leandrelegrand" target="_blank" rel="noopener">leandrelegrand</a></p>
+      </div>
+    </div>
+
+    <div class="cv-grid">
+      <main>
+        <section class="section">
+          <h3>Profil</h3>
+          <div>Étudiant en deuxième année de BUT Informatique, orienté développement back-end et visualisation de données. J'aime concevoir des solutions robustes, écrire du code propre et participer à des projets collaboratifs.</div>
+        </section>
+
+        <section class="section">
+          <h3>Expériences</h3>
+          <div>
+            <strong>Méo‑Fichaux SAS — Manutentionnaire</strong> · La Madeleine · 2023–2025<br>
+            <strong>Restaurant Le Fer à Cheval — Extra en salle</strong> · Roubaix · Août 2023
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Éducation</h3>
+          <div>
+            <strong>BUT Informatique 2ème année</strong> — IUT de Lille · 2024–Aujourd’hui<br>
+            <strong>Baccalauréat Maths & Numérique</strong> — Lycée Kernanec · Mention Bien · 2023<br>
+            <strong>Brevet des collèges</strong> — 2020
+          </div>
+        </section>
+      </main>
+
+      <aside>
+        <div class="section">
+          <h3>Compétences</h3>
+          <div class="skills-list">
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">HTML/CSS/JS</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Git/GitHub avancé</span>
+            <span class="skill-pill">UML</span>
+            <span class="skill-pill">Méthode Agile/Scrum</span>
+            <span class="skill-pill">OOP</span>
+            <span class="skill-pill">API REST</span>
+            <span class="skill-pill">Tests/Debugging</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Soft Skills</h3>
+          <div>Autonomie • Organisation • Communication • Esprit d’analyse • Curiosité • Gestion du temps</div>
+        </div>
+
+        <div class="section">
+          <h3>Skills Développés</h3>
+          <div>Projet SAÉ d’appariement adolescents — Analyse de données — Visualisation de données — Projets créatifs en Java et Python</div>
+        </div>
+      </aside>
+    </div>
+
+    <button id="downloadPdf" class="btn">Télécharger PDF</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+<script>
+document.getElementById('downloadPdf').addEventListener('click', function(){
+
+    
+    const cvElement = document.getElementById('cv').cloneNode(true);
+
+    
+    const photo = cvElement.querySelector('.cv-photo');
+    if(photo) photo.remove();
+
+   
+    const pdfStyle = document.createElement('style');
+    pdfStyle.textContent = `
+        body { font-family: Inter, sans-serif; background: #ffffff; color: #0f172a; }
+        .cv-card { width: 100%; padding: 50px; border-radius: 0; box-shadow: none; }
+        .section { background: linear-gradient(90deg,#f9fafb,#eef2ff); margin: 0 0 30px 0; padding: 25px; border-radius: 15px; }
+        .cv-title h1 { font-size: 2.5rem; margin-bottom: 12px; }
+        .cv-title p { font-size: 1rem; margin-bottom: 6px; }
+        aside { width: 100%; }
+        .btn { display:none; } /* masquer le bouton */
+        .cv-grid { grid-template-columns: 1fr; gap: 20px; }
+    `;
+    cvElement.prepend(pdfStyle);
+
+    html2pdf().set({
+        margin: 10,
+        filename: 'CV-Leandre-Legrand.pdf',
+        image: { type: 'jpeg', quality: 1 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    }).from(cvElement).save();
+});
+</script>
+
+</body>
+</html>
