@@ -10,69 +10,29 @@
 <nav class="navbar">
 <h2 class="logo">LÉANDRE</h2>
 <ul>
-<li><a href="index.html">Accueil</a></li>
-<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="../index.html">Accueil</a></li>
+<li><a href="portofolio.html">Portfolio</a></li>
 <li><a href="cv.html">CV</a></li>
 <li><a class="active" href="contact.html">Contact</a></li>
 </ul>
 </nav>
 
-
 <header class="hero small">
 <h1>Me contacter</h1>
 </header>
 
-
 <main>
 <section class="card">
-<form id="contact-form">
-<input type="text" id="name" placeholder="Votre nom" required>
-<input type="email" id="email" placeholder="Votre email" required>
-<textarea id="message" placeholder="Votre message" rows="5" required></textarea>
+<form action="https://formspree.io/f/xvgerpjg" method="POST">
+<input type="text" name="name" placeholder="Votre nom" required>
+<input type="email" name="email" placeholder="Votre email" required>
+<textarea name="message" placeholder="Votre message" rows="5" required></textarea>
 <button type="submit" class="btn">Envoyer</button>
 </form>
 <p id="status"></p>
 </section>
 </main>
 
-
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-(function(){
-// Initialise EmailJS : remplace par ton user ID EmailJS
-if (window.emailjs) {
-emailjs.init('TON_EMAILJS_USERID');
-}
-
-
-const form = document.getElementById('contact-form');
-const status = document.getElementById('status');
-
-
-form.addEventListener('submit', function(e) {
-e.preventDefault();
-status.textContent = 'Envoi en cours...';
-
-
-const templateParams = {
-from_name: document.getElementById('name').value,
-message: document.getElementById('message').value,
-reply_to: document.getElementById('email').value
-};
-
-
-emailjs.send('service_xxx','template_xxx', templateParams)
-.then(function(){
-status.textContent = 'Message envoyé — merci !';
-form.reset();
-}, function(error){
-status.textContent = 'Erreur lors de l\'envoi : ' + (error.text || 'réessaye plus tard');
-});
-});
-})();
-</script>
-
-
-<script src="script.js"></script>
+<script src="../script.js"></script>
 </body>
 </html>
