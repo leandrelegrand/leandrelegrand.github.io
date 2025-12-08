@@ -72,13 +72,15 @@ html,body{height:100%;margin:0;background:var(--bg);color:var(--text);-webkit-fo
   padding:0;
   overflow:hidden;
   border-radius:var(--radius);
+  max-width:400px;
+  margin:0 auto 18px;
 }
 
 .hero-image img{
   width:100%;
   height:auto;
-  max-height:300px;
-  object-fit:cover;
+  max-height:400px;
+  object-fit:contain;
   display:block;
 }
 
