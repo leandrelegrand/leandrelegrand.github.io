@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Accueil – Léandre Legrand</title>
-<link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CV de Léandre Legrand — Accueil</title>
+<link rel="stylesheet" href="css/theme.css">
 <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-<nav class="navbar">
-<h2 class="logo">LÉANDRE LEGRAND</h2>
-<ul>
-<li><a href="index.html" class="active">Accueil</a></li>
-<li><a href="html/portofolio.html">Portfolio</a></li>
-<li><a href="html/cv.html">CV</a></li>
-<li><a href="html/contact.html">Contact</a></li>
-</ul>
+<nav class="navbar container">
+  <h2 class="logo">LÉANDRE LEGRAND</h2>
+  <ul>
+    <li><a href="index.html" class="active">Accueil</a></li>
+    <li><a href="html/formations.html">Formations</a></li>
+    <li><a href="html/competences.html">Compétences</a></li>
+    <li><a href="html/experiences.html">Expériences</a></li>
+    <li><a href="html/realisations.html">Réalisations</a></li>
+    <li><a href="html/portofolio.html">Portfolio</a></li>
+    <li><a href="html/contact.html">Contact</a></li>
+  </ul>
 </nav>
 
-<header class="hero">
-<div class="hero-inner">
-<img src="img/photo_Léandre.jpg" alt="Portrait de Léandre Legrand" class="portrait">
-<div class="hero-text">
-<h1>Bonjour, je suis Léandre Legrand.</h1>
-<p class="lead">Étudiant en BUT Informatique — Développeur back‑end & visualisation de données.</p>
-<div class="hero-ctas">
-<a href="html/portofolio.html" class="btn btn-primary">Voir mes projets</a>
-<a href="html/cv.html" class="btn btn-outline">Télécharger mon CV</a>
-</div>
-</div>
-</div>
+<header class="hero container">
+  <h1>CV de Léandre Legrand</h1>
+  <p class="small">Étudiant en BUT Informatique — Développeur back‑end & visualisation de données. Je travaille sur l'appariement SAÉ, le traitement de données et des petits outils open-source. Je favorise le code propre, les tests et la documentation. Ouvert à stages (avril→juin 2025) et alternance.</p>
+  <div style="margin-top:18px">
+    <a class="btn btn-primary" href="html/experiences.html">Voir mes expériences</a>
+    <a class="btn btn-outline" href="html/cv.html">Voir CV complet</a>
+  </div>
 </header>
 
-<main class="main-wrap">
-<section class="card about">
-<h2>À propos</h2>
-<p>Étudiant motivé, j'aime résoudre des problèmes, coder des outils et apprendre de nouvelles technologies. Actuellement : appariement SAÉ et visualisations de données.</p>
-</section>
+<main class="container">
+  <section class="card">
+    <h2>Compétences clés</h2>
+    <p class="small">Java, SQL, HTML/CSS/JS, Python (pandas), Git, API REST, tests unitaires, conception d'algorithmes.</p>
+  </section>
 
-<section class="card">
-<h2>Compétences</h2>
-<ul class="skills-grid">
-<li>Java — POO — UML</li>
-<li>HTML / CSS / JavaScript</li>
-<li>SQL — Git — GitHub</li>
-<li>Python — Data analysis</li>
-</ul>
-</section>
+  <section class="card" style="margin-top:14px">
+    <h2>Projets récents</h2>
+    <ul class="small">
+      <li>Appariement SAÉ — algorithmes d'appariement en Java (voir Réalisations).</li>
+      <li>Visualisations de données — pipelines Python et dashboards.</li>
+      <li>Portfolio web — site statique hébergé sur GitHub Pages.</li>
+    </ul>
+  </section>
 </main>
 
-<script src="script.js"></script>
+<footer class="footer-simple">© 2025 Léandre Legrand</footer>
 </body>
 </html>

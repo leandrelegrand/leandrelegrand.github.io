@@ -1,145 +1,96 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CV – Léandre Legrand</title>
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/cv.css">
+<link rel="stylesheet" href="../css/theme.css">
 </head>
 <body>
-
-<nav class="navbar">
-<h2 class="logo">LÉANDRE</h2>
-<ul>
-<li><a href="../index.html">Accueil</a></li>
-<li><a href="portofolio.html">Portfolio</a></li>
-<li><a href="cv.html" class="active">CV</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
+<nav class="navbar container">
+  <h2 class="logo">LÉANDRE LEGRAND</h2>
+  <ul>
+    <li><a href="../index.html">Accueil</a></li>
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="competences.html">Compétences</a></li>
+    <li><a href="experiences.html">Expériences</a></li>
+    <li><a href="realisations.html">Réalisations</a></li>
+    <li><a href="portofolio.html">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
 
-<div class="cv-wrap">
+<div class="container">
   <article class="cv-card" id="cv">
-    <header class="cv-header">
-      <div class="avatar">
-        <img src="../img/photo_Léandre.jpg" alt="Photo Léandre Legrand">
-      </div>
-      <div class="cv-title">
-        <h1>Léandre Legrand</h1>
-        <p class="sub">20 ans</p>
-        <p class="contact">leandrel.legrand@gmail.com · <a href="https://github.com/leandrelegrand" target="_blank" rel="noopener">github.com/leandrelegrand</a></p>
+    <header style="text-align:center;margin-bottom:28px">
+      <h1 style="margin:0;color:var(--text);font-size:2.2rem">Léandre Legrand</h1>
+      <p class="small" style="margin-top:8px">20 ans · leandrel.legrand@gmail.com · <a class="blue" href="https://github.com/leandrelegrand" target="_blank">github.com/leandrelegrand</a></p>
+      <div style="margin-top:14px">
+        <a href="../im/CV_léandre_legrand.pdf" class="btn btn-ghost" download>Télécharger CV (PDF)</a>
       </div>
     </header>
 
-    <div class="cv-grid">
-      <main class="cv-main">
-        <section class="section profile">
+    <div class="grid cols-2">
+      <main>
+        <section class="card">
           <h2>Profil</h2>
-          <p>Étudiant en BUT Informatique, orienté développement back‑end et visualisation de données. Recherche stage (avril→juin 2025) ou alternance. Code propre, sens de l'analyse et goût du travail en équipe.</p>
+          <p class="small">Étudiant en BUT Informatique. Intérêt pour l'algorithmique appliquée, la préparation et l'analyse de données ainsi que le développement web. Capable de travailler en équipe et produire des livrables documentés.</p>
         </section>
 
-        <section class="section experience">
+        <section class="card">
           <h2>Expériences</h2>
-          <div class="exp-item">
-            <h3><a href="https://www.meo-fichaux.fr" target="_blank" rel="noopener">Méo‑Fichaux SAS</a> — Paqueteur</h3>
-            <span class="meta">La Madeleine · 2023–2025</span>
-            <p>Préparation et conditionnement de colis, tri et organisation de marchandises. Respect des normes de qualité et des délais. Travail en équipe et fiabilité.</p>
+
+          <div style="margin-bottom:14px">
+            <h3><a class="blue" href="https://www.cafe-fichaux.fr/" target="_blank">Méo‑Fichaux SAS</a> — Paqueteur</h3>
+            <p class="small">La Madeleine · 2023–2025</p>
+            <p class="small">Préparation et conditionnement de colis, tri et organisation. Fiabilité et respect des délais.</p>
+            <ul class="small">
+              <li>Compétences développées : rigueur, rapidité d'exécution, travail en équipe.</li>
+            </ul>
           </div>
 
-          <div class="exp-item">
-            <h3><a href="https://restaurant-ferracheval.fr" target="_blank" rel="noopener">Restaurant Le Fer à Cheval</a> — Extra en salle</h3>
-            <span class="meta">Roubaix · Août 2023</span>
-            <p>Service en salle, relation client et gestion du stress en environnement rapide.</p>
+          <div>
+            <h3><a class="blue" href="https://www.leferacheval-restaurant.com/" target="_blank">Restaurant Le Fer à Cheval</a> — Extra en salle</h3>
+            <p class="small">Roubaix · Août 2023</p>
+            <p class="small">Service en salle, relation client.</p>
+            <ul class="small">
+              <li>Compétences développées : gestion du stress, relation client.</li>
+            </ul>
           </div>
         </section>
 
-        <section class="section education">
-          <h2>Formation</h2>
-          <p><strong>BUT Informatique — IUT de Lille</strong> · 2024–Aujourd'hui</p>
-          <p><strong>Bac Maths & Numérique — Mention Bien</strong> · 2023</p>
-        </section>
-
-        <section class="section projects">
-          <h2>Projets</h2>
-          <ul>
-            <li><strong>Appariement SAÉ</strong> — Java, CSV, algorithmes</li>
-            <li><strong>Visualisations de données</strong> — Python, pandas, matplotlib</li>
-            <li><strong>Portfolio web</strong> — HTML, CSS, JavaScript, GitHub Pages</li>
+        <section class="card">
+          <h2>Projets informatiques (BUT)</h2>
+          <ul class="small">
+            <li><strong>Appariement SAÉ</strong> — Java, algorithmes d'appariement, tests unitaires.</li>
+            <li><strong>Visualisations de données</strong> — Python, pandas, matplotlib — création de dashboards d'analyse.</li>
           </ul>
         </section>
       </main>
 
-      <aside class="cv-aside">
-        <section class="section skills">
-          <h2>Compétences</h2>
-          <ul class="skills-list">
-            <li>Java (POO, design)</li>
-            <li>SQL / Bases de données</li>
+      <aside>
+        <section class="card">
+          <h3>Compétences techniques</h3>
+          <ul class="small">
+            <li>Java (POO, tests)</li>
+            <li>SQL / PostgreSQL</li>
             <li>HTML / CSS / JavaScript</li>
-            <li>Python — Data (pandas)</li>
-            <li>API REST / JSON</li>
-            <li>Git / GitHub</li>
-            <li>Tests unitaires & debugging</li>
+            <li>Python (pandas)</li>
+            <li>Git / GitHub / GitLab</li>
           </ul>
         </section>
 
-        <section class="section developed">
-          <h2>Compétences développées</h2>
-          <ul>
-            <li>Conception d'algorithmes d'appariement (rigueur algorithmique)</li>
-            <li>Nettoyage & analyse de données (pandas, CSV)</li>
-            <li>Déploiement & gestion de versions (Git)</li>
-            <li>Travail collaboratif et documentation</li>
-            <li>Gestion du temps et organisation opérationnelle</li>
-          </ul>
+        <section class="card">
+          <h3>Informations</h3>
+          <p class="small"><strong>Langues :</strong> Français (natif) · Anglais B2 (TOEIC 970/990)</p>
+          <p class="small"><strong>Permis :</strong> B</p>
+          <p class="small">Disponibilité : Stage avril → juin 2025</p>
         </section>
-
-        <section class="section extra">
-          <h2>Informations</h2>
-          <p><strong>Langues :</strong> Français (natif) · Anglais B2 (TOEIC 970/990)</p>
-          <p><strong>Permis :</strong> B</p>
-        </section>
-
-        <div class="actions">
-          <button id="downloadPdf" class="btn">Télécharger PDF</button>
-          <a class="btn outline" href="../html/contact.html">Me contacter</a>
-        </div>
       </aside>
     </div>
   </article>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-<script>
-document.getElementById('downloadPdf').addEventListener('click', function(){
-  const cvElement = document.getElementById('cv').cloneNode(true);
-
-
-  cvElement.querySelectorAll('a').forEach(a => {
-    const s = document.createElement('span'); s.textContent = a.textContent; a.replaceWith(s);
-  });
-  cvElement.querySelectorAll('button').forEach(b => b.remove());
-
-  const style = document.createElement('style');
-  style.textContent = `
-    body{background:#fff;color:#111;font-family:Inter,Arial,Helvetica,sans-serif}
-    .cv-card{box-shadow:none;padding:36px}
-    .cv-header{display:block;text-align:center}
-    .cv-title h1{font-size:36px}
-    .cv-grid{display:block}
-  `;
-  cvElement.prepend(style);
-
-  html2pdf().set({
-    margin: 10,
-    filename: 'cv_léandre.pdf',
-    image: { type: 'jpeg', quality: 1 },
-    html2canvas: { scale: 2, useCORS: true },
-    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-  }).from(cvElement).save();
-});
-</script>
-
+<footer class="footer-simple">© 2025 Léandre Legrand</footer>
 </body>
 </html>
