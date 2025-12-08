@@ -7,49 +7,59 @@
 <link rel="stylesheet" href="css/theme.css">
 </head>
 <body>
-<nav class="navbar container">
-  <h2 class="logo">LÉANDRE LEGRAND</h2>
-  <ul>
-    <li><a href="index.html" class="active">Accueil</a></li>
-    <li><a href="html/formations.html">Formations</a></li>
-    <li><a href="html/competences.html">Compétences</a></li>
-    <li><a href="html/experiences.html">Expériences</a></li>
-    <li><a href="html/realisations.html">Réalisations</a></li>
-    <li><a href="html/portofolio.html">Portfolio</a></li>
-    <li><a href="html/cv.html">CV</a></li>
-    <li><a href="html/contact.html">Contact</a></li>
-  </ul>
+<nav class="navbar">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:20px">
+    <h2 class="logo">LÉANDRE LEGRAND</h2>
+    <ul>
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="html/formations.html">Formations</a></li>
+      <li><a href="html/competences.html">Compétences</a></li>
+      <li><a href="html/experiences.html">Expériences</a></li>
+      <li><a href="html/realisations.html">Réalisations</a></li>
+      <li><a href="html/portofolio.html">Portfolio</a></li>
+      <li><a href="html/cv.html">CV</a></li>
+      <li><a href="html/contact.html">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
 <main class="container">
-  <section class="hero-image card">
-    <img src="img/photo_Léandre.jpg" alt="Photo Léandre Legrand">
-  </section>
+  <div style="display:grid;grid-template-columns:1fr 280px;gap:24px;align-items:start">
+    <div>
+      <header class="hero">
+        <h1>CV de Léandre Legrand</h1>
+        <p class="small">Étudiant en BUT Informatique — Développeur back‑end & visualisation de données. Je travaille sur l'appariement SAÉ, le traitement de données et des petits outils open-source. Ouvert à stages (avril→juin 2025) et alternance.</p>
+        <div style="margin-top:18px">
+          <a class="btn btn-primary" href="html/experiences.html">Voir mes expériences</a>
+          <a class="btn btn-outline" href="html/cv.html">Voir CV complet</a>
+        </div>
+      </header>
 
-  <header class="hero">
-    <h1>CV de Léandre Legrand</h1>
-    <p class="small">Étudiant en BUT Informatique — Développeur back‑end & visualisation de données. Je travaille sur l'appariement SAÉ, le traitement de données et des petits outils open-source. Ouvert à stages (avril→juin 2025) et alternance.</p>
-    <div style="margin-top:18px">
-      <a class="btn btn-primary" href="html/experiences.html">Voir mes expériences</a>
-      <a class="btn btn-outline" href="html/cv.html">Voir CV complet</a>
+      <section class="card">
+        <h2>Compétences clés</h2>
+        <p class="small">Java, SQL, HTML/CSS/JS, Python (pandas), Git, API REST, tests unitaires, conception d'algorithmes.</p>
+      </section>
+
+      <section class="card">
+        <h2>Projets récents</h2>
+        <ul class="small">
+          <li>Appariement SAÉ — algorithmes d'appariement en Java (voir Réalisations).</li>
+          <li>Visualisations de données — pipelines Python et dashboards.</li>
+          <li>Portfolio web — site statique hébergé sur GitHub Pages.</li>
+        </ul>
+      </section>
     </div>
-  </header>
 
-  <section class="card">
-    <h2>Compétences clés</h2>
-    <p class="small">Java, SQL, HTML/CSS/JS, Python (pandas), Git, API REST, tests unitaires, conception d'algorithmes.</p>
-  </section>
-
-  <section class="card">
-    <h2>Projets récents</h2>
-    <ul class="small">
-      <li>Appariement SAÉ — algorithmes d'appariement en Java (voir Réalisations).</li>
-      <li>Visualisations de données — pipelines Python et dashboards.</li>
-      <li>Portfolio web — site statique hébergé sur GitHub Pages.</li>
-    </ul>
-  </section>
+    <aside style="position:sticky;top:70px">
+      <section class="hero-image card">
+        <img src="img/photo_Léandre.jpg" alt="Photo Léandre Legrand">
+      </section>
+    </aside>
+  </div>
 </main>
 
 <footer class="footer-simple">© 2025 Léandre Legrand</footer>
-</body>
+
+
+</html></body></body>
 </html>
