@@ -3,36 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio – Léandre</title>
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/portfolio.css">
+<title>Portfolio – Léandre Legrand</title>
+<link rel="stylesheet" href="../css/theme.css">
 </head>
 <body>
-<nav class="navbar">
-<h2 class="logo">LÉANDRE</h2>
-<ul>
-<li><a href="../index.html">Accueil</a></li>
-<li><a class="active" href="portofolio.html">Portfolio</a></li>
-<li><a href="cv.html">CV</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
+<nav class="navbar container">
+  <h2 class="logo">LÉANDRE LEGRAND</h2>
+  <ul>
+    <li><a href="../index.html">Accueil</a></li>
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="competences.html">Compétences</a></li>
+    <li><a href="experiences.html">Expériences</a></li>
+    <li><a href="realisations.html">Réalisations</a></li>
+    <li><a class="active" href="portofolio.html">Portfolio</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
 
-<header class="hero-portfolio">
-<h1>Mes Projets</h1>
-<p class="subtitle">Découvrez mes projets sur GitHub et GitLab</p>
+<header class="hero">
+  <h1>Mes Projets</h1>
+  <p class="small">Découvrez mes projets sur GitHub et GitLab</p>
 </header>
 
-<main class="portfolio-wrap">
-<section class="projects-section">
-<div class="source-toggle">
-<button id="use-github" class="btn btn-toggle active">GitHub</button>
-<button id="use-gitlab" class="btn btn-toggle">GitLab</button>
-</div>
-<div id="github-projects" class="projects"></div>
-</section>
+<main class="container">
+  <section class="card">
+    <div style="text-align:center;margin-bottom:18px">
+      <button id="use-github" class="btn btn-toggle active">GitHub</button>
+      <button id="use-gitlab" class="btn btn-toggle">GitLab</button>
+    </div>
+    <div id="github-projects" class="projects"></div>
+  </section>
 </main>
 
+<footer class="footer-simple">© 2025 Léandre Legrand</footer>
 <script src="../js/script.js"></script>
 </body>
 </html>
