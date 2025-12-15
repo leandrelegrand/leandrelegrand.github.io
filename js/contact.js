@@ -16,14 +16,14 @@ if (form) {
 
   
   form.addEventListener('formSubmitted', function() {
-    statusEl.textContent = '✓ Message envoyé avec succès ! Merci.';
+    statusEl.textContent = ' Message envoyé avec succès ! Merci.';
     statusEl.classList.add('show', 'success');
     form.reset();
     setTimeout(() => statusEl.classList.remove('show'), 5000);
   });
 
   form.addEventListener('formError', function() {
-    statusEl.textContent = '✗ Erreur lors de l\'envoi. Réessayez.';
+    statusEl.textContent = ' Erreur lors de l\'envoi. Réessayez.';
     statusEl.classList.add('show', 'error');
   });
 }
