@@ -38,17 +38,11 @@ async function fetchGitHub(username = GITHUB_USERNAME) {
 async function fetchGitLab(username = GITLAB_USERNAME) {
   if (!githubProjectsEl) return;
   githubProjectsEl.innerHTML = '<p style="text-align:center;color:var(--muted)">Chargement...</p>';
+  
   try {
-    const userRes = await fetch(`https://gitlab.com/api/v4/users?username=${encodeURIComponent(username)}`);
-    if (!userRes.ok) throw new Error(`Utilisateur GitLab non trouvé (${userRes.status})`);
-    const users = await userRes.json();
-    if (!Array.isArray(users) || users.length === 0) {
-      githubProjectsEl.innerHTML = '<p style="text-align:center;color:var(--muted)">Utilisateur GitLab introuvable.</p>';
-      return;
-    }
-    const userId = users[0].id;
-    const res = await fetch(`https://gitlab.com/api/v4/users/${userId}/projects?archived=false&per_page=100&order_by=last_activity_at&sort=desc`);
-    if (!res.ok) throw new Error(`Projets introuvables (${res.status})`);
+    const res = await fetch(`https://gitlab.com/api/v4/users/${username}/projects`);
+    if (!res.ok) throw new Error(`Erreur ${res.status}`);
+    
     const data = await res.json();
     if (!Array.isArray(data) || data.length === 0) {
       githubProjectsEl.innerHTML = '<p style="text-align:center;color:var(--muted)">Aucun projet.</p>';
